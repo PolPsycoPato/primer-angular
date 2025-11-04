@@ -34,11 +34,17 @@ import { Component } from '@angular/core';
 export class Home {
   public titulo: string;
   public year: number;
+// 🏗️ EN ANGULAR (Y EN REACT TAMBIÉN), TENEMOS UN CONSTRUCTOR.
+    // El constructor se ejecuta automáticamente cuando se crea una instancia del componente.
+    // Aquí es donde inicializamos las variables de la clase.
 
-  // Por ahora está vacía, pero aquí podrías definir variables, métodos, o eventos
-  // que se usarán dentro de la plantilla (home.html).
   constructor() {
+
+     // 🧩 AQUI ES DONDE SE DECLARAN LAS VARIABLES
+    // En TypeScript, las variables deben tener un tipo definido (tipado estático).
+    // Estas variables podrán ser utilizadas dentro del HTML del componente mediante interpolación {{ }}.
     this.titulo = 'Hola Mundo desde ANGULAR';
     this.year = 1111;
+      // Para acceder a los elementos (propiedades) de la clase, usamos la palabra clave 'this'.
   }
 }
