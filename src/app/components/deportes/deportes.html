@@ -1,0 +1,65 @@
+<div>
+      <h1 class="gradient-text" >Directivas Angular</h1>
+
+
+      <h2>Número de deportes: {{ sports.length }}</h2>
+
+      <!-- ⚙️ *ngIf: Directiva estructural para mostrar contenido condicionalmente -->
+      <!-- Aquí comprobamos si hay menos de 6 deportes -->
+      <div *ngIf="sports.length < 6; then condicionTrue; else condicionElse"></div>
+
+      <!-- Si la condición es verdadera -->
+      <ng-template #condicionTrue>
+        <p style="color: red;">Tenemos menos de 6 deportes</p>
+      </ng-template>
+
+      <!-- Si la condición es falsa -->
+      <ng-template #condicionElse>
+        <p style="color: lime;">Tenemos más de 6 deportes</p>
+      </ng-template>
+
+      <!-- 🧩 Mostramos el primer deporte -->
+      <p>El primer deporte es: {{ sports[0] }}</p>
+
+      <hr>
+
+      <!-- 🔁 *ngFor: Directiva para recorrer un array -->
+      <h3>Lista de todos los deportes:</h3>
+      <ul>
+
+        
+        <li *ngFor="let sport of sports; let i = index">
+          {{ i + 1 }} - {{ sport }}
+        </li>
+      </ul>
+    </div>
+
+    <hr>
+
+    <hr>
+    <hr>
+
+    <div>
+  <h1 class="gradient-text">Directivas Angular</h1>
+
+  <h2>Número de deportes: {{ sports.length }}</h2>
+
+  <!-- 🧠 NUEVA SINTAXIS DE CONTROL DE FLUJO -->
+  @if (sports.length < 6) {
+    <p style="color: red;">Tenemos menos de 6 deportes</p>
+  } @else {
+    <p style="color: lime;">Tenemos más de 6 deportes</p>
+  }
+
+  <p>El primer deporte es: {{ sports[0] }}</p>
+
+  <hr>
+
+  <h3>Lista de todos los deportes:</h3>
+  <ul>
+    @for (sport of sports; track sport; let i = $index) {
+      <li>{{ i + 1 }} - {{ sport }}</li>
+    }
+  </ul>
+</div>
+

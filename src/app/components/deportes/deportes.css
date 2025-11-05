@@ -1,0 +1,21 @@
+.gradient-text {
+  background: linear-gradient(90deg, #ff0000, #00ff00);
+  -webkit-background-clip: text;
+  color: transparent; /* ya no se usa -webkit-text-fill-color si el navegador lo soporta */
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+
+
+@keyframes moverTexto {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

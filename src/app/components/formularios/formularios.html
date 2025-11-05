@@ -1,0 +1,38 @@
+
+<div>
+  <h1 class="gradient-text">Forms Binding Model</h1>
+
+  <!-- Primer formulario -->
+  <form #userform="ngForm">
+    <label>Name: </label>
+    <input type="text" name="cajaname" [(ngModel)]="user.name" />
+
+    <label>Surname: </label>
+    <input type="text" name="cajasurname" [(ngModel)]="user.surname" />
+
+    <label>Age: </label>
+    <input type="number" name="cajayears" [(ngModel)]="user.years" />
+
+    <button type="button">Enviar</button>
+
+    <h2>
+      Hola, soy {{ user.surname }}, {{ user.name }} y tengo {{ user.years }} años
+    </h2>
+  </form>
+
+  <hr /> <hr /> <hr />
+
+  <!-- Segundo formulario -->
+  <form #sumarform="ngForm">
+    <label>Numero A: </label>
+    <input type="number" name="cajanumbera" [(ngModel)]="user.numbera" />
+
+    <label>Numero B: </label>
+    <input type="number" name="cajanumberb" [(ngModel)]="user.numberb" />
+
+    <!-- ✅ type="button" para evitar recargar la página -->
+    <button type="button" (click)="sumarNumeros()">Sumar</button>
+
+    <p>Resultado: {{ suma }}</p>
+  </form>
+</div>

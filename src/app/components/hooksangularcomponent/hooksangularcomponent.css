@@ -1,0 +1,23 @@
+.hooks-container {
+  text-align: center;
+  padding: 2rem;
+  border: 2px solid #444;
+  border-radius: 10px;
+  background: #1e1e1e;
+  color: white;
+}
+
+button {
+  margin: 0.5rem;
+  padding: 0.6rem 1.2rem;
+  background: linear-gradient(90deg, #ff0077, #00eaff);
+  border: none;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  opacity: 0.8;
+}

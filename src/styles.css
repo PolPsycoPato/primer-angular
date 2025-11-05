@@ -1,1 +1,33 @@
-/* You can add global styles to this file, and also import other style files */
+.gradient-text {
+   /* 🎨 Degradado multicolor animado */
+  background: linear-gradient(
+    90deg,
+    #ff0000,
+    #ff7f00,
+    #ffff00,
+    #00ff00,
+    #0000ff,
+    #4b0082,
+    #8f00ff
+  );
+
+  background-size: 400% 400%;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: moverTexto 3s ease infinite;
+  
+}
+
+
+
+@keyframes moverTexto {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
